@@ -13,8 +13,8 @@ depends=('lua' 'python')
 makedepends=('cmake' 're2c')
 conflicts=('clasp')
 options=('!lto')
-source=("https://github.com/potassco/clingo/archive/refs/tags/v${pkgver}tar.gz")
-sha256sums=""
+source=("https://github.com/potassco/clingo/archive/refs/tags/v${pkgver}.tar.gz")
+sha256sums=("")
 
 build() {
   mkdir -p ${srcdir}/build
