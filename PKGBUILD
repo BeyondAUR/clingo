@@ -18,7 +18,7 @@ sha256sums=("81eb7b14977ac57c97c905bd570f30be2859eabc7fe534da3cdc65eaca44f5be")
 build() {
   mkdir -p ${srcdir}/build
   export CXXFLAGS="${CXXFLAGS//-fvar-tracking-assignments/}"
-  cmake -S "${srcdir}" -B "${srcdir}/build" \
+  cmake -S "${srcdir}/${pkgname}-${pkgver}" -B "${srcdir}/build" \
     -DCMAKE_INSTALL_PREFIX=/usr \
     -DCMAKE_INSTALL_LIBDIR=lib \
     -DCLINGO_REQUIRE_PYTHON=ON \
@@ -34,5 +34,5 @@ build() {
 
 package() {
   DESTDIR="${pkgdir}" make -C build install
-  install -Dm644 "${srcdir}/${pkgname}/LICENSE.md" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE.md"
+  install -Dm644 "${srcdir}/${pkgname}-${pkgver}/LICENSE.md" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE.md"
 }
