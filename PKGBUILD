@@ -26,10 +26,10 @@ build() {
     -DCLINGO_BUILD_WITH_LUA=ON \
     -DCMAKE_CXX_COMPILER=g++ \
     -G "Unix Makefiles"
-  make
+  make -C "${srcdir}/build"
 }
 
 package() {
-  DESTDIR="${pkgdir}" make -C build install
+  DESTDIR="${pkgdir}" make -C "${srcdir}/build" install
   install -Dm644 "${srcdir}/${pkgname}-${pkgver}/LICENSE.md" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE.md"
 }
