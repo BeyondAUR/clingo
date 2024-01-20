@@ -21,12 +21,9 @@ build() {
   cmake -S "${srcdir}/${pkgname}-${pkgver}" -B "${srcdir}/build" \
     -DCMAKE_INSTALL_PREFIX=/usr \
     -DCMAKE_INSTALL_LIBDIR=lib \
-    -DCLINGO_REQUIRE_PYTHON=ON \
+    -DCMAKE_BUILD_TYPE=Release \
     -DCLINGO_BUILD_WITH_PYTHON=ON \
-    -DCLINGO_BUILD_PY_SHARED=ON \
-    -DPYCLINGO_USER_INSTALL=OFF \
-    -DCLINGO_REQUIRE_LUA=ON \
-    -DCLINGO_BUILD_LUA_SHARED=ON \
+    -DCLINGO_BUILD_WITH_LUA=ON \
     -DCMAKE_CXX_COMPILER=g++ \
     -G "Unix Makefiles"
   make
