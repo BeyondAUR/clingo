@@ -14,7 +14,7 @@ makedepends=('cmake' 're2c')
 conflicts=('clasp')
 options=('!lto')
 source=("https://github.com/potassco/clingo/archive/refs/tags/v${pkgver}.tar.gz")
-sha256sums=("")
+sha256sums=("81eb7b14977ac57c97c905bd570f30be2859eabc7fe534da3cdc65eaca44f5be")
 
 build() {
   mkdir -p ${srcdir}/build
