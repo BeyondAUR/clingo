@@ -3,8 +3,8 @@
 # Contributor: Vincent Bernardoff <vb at luminar dot eu dot org>
 
 pkgname=clingo
-pkgver=5.6.2
-pkgrel=2
+pkgver=5.7.1
+pkgrel=1
 pkgdesc='Grounding tools for (disjunctive) logic programs'
 arch=('i686' 'x86_64')
 url='https://potassco.org/'
@@ -13,7 +13,7 @@ depends=('lua' 'python')
 makedepends=('cmake' 're2c')
 conflicts=('clasp')
 source=("${pkgname}-${pkgver}.tar.gz::https://github.com/potassco/clingo/archive/refs/tags/v${pkgver}.tar.gz")
-sha256sums=("81eb7b14977ac57c97c905bd570f30be2859eabc7fe534da3cdc65eaca44f5be")
+sha256sums=("544b76779676075bb4f557f05a015cbdbfbd0df4b2cc925ad976e86870154d81")
 
 build() {
   mkdir -p ${srcdir}/build
