@@ -11,3 +11,5 @@ jobs:
         uses: BeyondAUR-Aux/beyondaur-pkgbuild-action@master
       - name: add to repo
         uses: BeyondAUR-Aux/beyondaur-upload-arch-packages-action@main
+        with: 
+          repo_token: ${{ secrets.REPOUPLOAD_TOKEN }}
