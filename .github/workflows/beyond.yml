@@ -8,5 +8,5 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: pkgbuild
-        uses: BeyondAUR-Aux/beyondaur-pkgbuild-action@master
+        uses: BeyondAUR-Aux/beyondaur-pkgbuild-action@v2
         
