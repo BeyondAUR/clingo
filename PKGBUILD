@@ -24,7 +24,8 @@ build() {
     -DCMAKE_BUILD_TYPE=Release \
     -DCLINGO_BUILD_WITH_PYTHON=ON \
     -DCLINGO_BUILD_WITH_LUA=ON \
-    -DCMAKE_CXX_COMPILER=g++
+    -DCMAKE_CXX_COMPILER=g++ \
+    -DCMAKE_POLICY_VERSION_MINIMUM=3.10
   cmake --build "${srcdir}/build"
 }
 
