@@ -23,9 +23,9 @@ prepare() {
 }
 
 build() {
-  mkdir -p ${srcdir}/build
+  mkdir -p ${srcdir}/${pkgname}
   export CXXFLAGS="${CXXFLAGS//-fvar-tracking-assignments/}"
-  cmake -S "${srcdir}/${pkgname}-${pkgver}" -B "${srcdir}/build" \
+  cmake -S "${srcdir}/${pkgname}" -B "${srcdir}/build" \
     -DCMAKE_INSTALL_PREFIX=/usr \
     -DCMAKE_INSTALL_LIBDIR=lib \
     -DCMAKE_BUILD_TYPE=Release \
@@ -38,5 +38,5 @@ build() {
 
 package() {
   DESTDIR="${pkgdir}" cmake --install "${srcdir}/build"
-  install -Dm644 "${srcdir}/${pkgname}-${pkgver}/LICENSE.md" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE.md"
+  install -Dm644 "${srcdir}/${pkgname}/LICENSE.md" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE.md"
 }
