@@ -3,8 +3,8 @@
 # Contributor: Vincent Bernardoff <vb at luminar dot eu dot org>
 
 pkgname=clingo
-pkgver=5.8.0
-pkgrel=2
+pkgver=5.8.2
+pkgrel=1
 pkgdesc='Grounding tools for (disjunctive) logic programs'
 arch=('i686' 'x86_64')
 url='https://potassco.org/'
@@ -12,10 +12,8 @@ license=('MIT')
 depends=('lua' 'python')
 makedepends=('cmake' 're2c' 'git')
 conflicts=('clasp')
-source=("git+https://github.com/potassco/clingo#tag=v${pkgver}"
-        "fix-re2c-4.3-compat.patch")
-sha256sums=('eb06af702e54d4bd7aefda2776b469e78dc5728a41b0f3867515c599625a0909'
-            'e4f1e150eb1bfaf9def1a315caa6297149f21e5ec0a8e68213a69426de45831c')
+source=("git+https://github.com/potassco/clingo#tag=v${pkgver}")
+sha256sums=('47c3676120ac94f5381faf073f6faabc4c21ac0bee2f86c8e5b31779c06aef7c')
 
 prepare() {
   cd ${srcdir}/${pkgname}
