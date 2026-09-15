@@ -15,11 +15,6 @@ conflicts=('clasp')
 source=("git+https://github.com/potassco/clingo#tag=v${pkgver}")
 sha256sums=('47c3676120ac94f5381faf073f6faabc4c21ac0bee2f86c8e5b31779c06aef7c')
 
-prepare() {
-  cd ${srcdir}/${pkgname}
-  patch -Np1 -i "${srcdir}/fix-re2c-4.3-compat.patch"
-}
-
 build() {
   mkdir -p ${srcdir}/${pkgname}
   export CXXFLAGS="${CXXFLAGS//-fvar-tracking-assignments/}"
